@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro"
 
 const allPosts = Object.values(import.meta.glob('./logs/*.md', { eager: true }));
 const pageTitle = 'Learning Log'
+
 ---
 <!-- TODO: Content on this page -->
 <BaseLayout pageTitle={pageTitle}>

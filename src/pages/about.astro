@@ -1,9 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
 
-const pageTitle = 'Sarah Katz'
+const pageTitle = 'About Sarah'
 ---
-<!-- TODO: Content on this page -->
 <BaseLayout pageTitle={pageTitle}>
 	<h2>About Me</h2>
 	<p>
@@ -12,4 +11,10 @@ const pageTitle = 'Sarah Katz'
 		I strongly believe in the power of teamwork and actively contribute to a collaborative and supportive environment by sharing my knowledge and helping others succeed. 
 		Outside of work, I enjoy reading, group fitness, and exploring different arts and crafts.
 	</p>
+	<p class="coming-soon">More info to come soon</p>
 </BaseLayout>
+<style>
+	.coming-soon {
+		font-style: italic;
+	}
+</style>

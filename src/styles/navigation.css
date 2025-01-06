@@ -1,0 +1,21 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5rem;
+  text-transform: uppercase;
+}
+
+a {
+  color: var(--primary-sage);
+  padding-bottom: 0.25rem;
+  text-decoration: none;
+}
+
+a.current {
+  border-bottom: 2px solid var(--accent-teal);
+}
+
+a:hover {
+  border-bottom: 1px solid var(--primary-sage);
+}

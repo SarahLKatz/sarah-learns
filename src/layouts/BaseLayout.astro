@@ -4,7 +4,6 @@ import '../styles/global.css';
 
 const {pageTitle} = Astro.props
 ---
-<!-- TODO: Styles -->
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -14,8 +13,12 @@ const {pageTitle} = Astro.props
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-        <Navigation />
-		<h1>{pageTitle}</h1>
+        <div class="container">
+            <Navigation />
+            <main>
+		        <h1>{pageTitle}</h1>
+                <slot />
+            </main>
+        </div>
 	</body>
-    <slot />
 </html>

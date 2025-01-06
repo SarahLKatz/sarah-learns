@@ -2,7 +2,7 @@
   --primary-teal: #008080;
   --primary-sage: #4d6d4b;
   --secondary-gray: #c0c0c0;
-  --accent-yellow: #ffff00;
+  --accent-teal: #004040;
 }
 
 * {
@@ -10,14 +10,19 @@
   font-family: sans-serif;
 }
 
+body {
+  margin: 1rem;
+}
+
+.container {
+  margin: 2rem auto;
+  max-width: 768px;
+}
+
+main {
+  padding: 0.5rem;
+}
+
 h1 {
   color: var(--primary-teal);
-}
-
-a {
-  color: var(--primary-sage);
-}
-
-a .current {
-  border-bottom: 1px solid var(--accent-yellow);
 }

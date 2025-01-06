@@ -1,7 +1,9 @@
 ---
+import '../styles/navigation.css';
+const currentPath = Astro.url.pathname;
+
+const navItems = [{href: '/', text: 'Learning Log'}, {href: '/about', text: 'About Sarah'}];
 ---
-<!-- TODO: Styles -->
 <nav>
-    <a href="/">Home</a>
-    <a href="/">About Sarah</a>
+    {navItems.map(({href, text}) => <a href={href} class={currentPath === href ? 'current' : ''}>{text}</a>)}
 </nav>
