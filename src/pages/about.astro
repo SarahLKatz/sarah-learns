@@ -1,20 +1,49 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro"
+import BaseLayout from "../layouts/BaseLayout.astro";
 
-const pageTitle = 'About Sarah'
+const pageTitle = "About Sarah";
 ---
+
 <BaseLayout pageTitle={pageTitle}>
-	<h2>About Me</h2>
-	<p>
-		I'm a frontend developer with a passion for building user-friendly and engaging web experiences. 
-		I have experience with React and enjoy building beautiful and user-friendly UIs. 
-		I strongly believe in the power of teamwork and actively contribute to a collaborative and supportive environment by sharing my knowledge and helping others succeed. 
-		Outside of work, I enjoy reading, group fitness, and exploring different arts and crafts.
-	</p>
-	<p class="coming-soon">More info to come soon</p>
+  <h2>About Me</h2>
+  <p>
+    I'm a frontend developer with a passion for building user-friendly and
+    engaging web experiences. I have experience with React and enjoy building
+    beautiful and user-friendly UIs. I strongly believe in the power of teamwork
+    and actively contribute to a collaborative and supportive environment by
+    sharing my knowledge and helping others succeed. Outside of work, I enjoy
+    reading, group fitness, and exploring different arts and crafts.
+  </p>
+  <p class="coming-soon">More info to come soon</p>
+  <section class="hide">
+    <p>
+      Hi, I'm Sarah! I’m a skilled software engineer with experience in both
+      fullstack and frontend development. Since graduating from a coding
+      bootcamp in December 2017, I’ve successfully led feature development and
+      launches, played a key role in company-wide initiatives, and helped
+      modernize codebases by tackling technical debt, including driving
+      TypeScript conversions. I take pride in writing clean, maintainable code
+      that directly contributes to the success of my team.
+    </p>
+    <p>
+      Collaboration is a key part of what I love about development. I enjoy
+      mentoring others, troubleshooting problems together, and presenting
+      technical demos. I believe the best solutions come from open communication
+      and teamwork, and I’m always looking for ways to foster a positive,
+      collaborative environment.
+    </p>
+    <p>
+      As I continue to grow in my career, I’m excited to expand my skill set,
+      take on new responsibilities, and share my knowledge with others. While I
+      haven’t yet contributed to open-source projects or spoken at meetups or
+      conferences, these are goals I’m working toward. I’m passionate about
+      "learning in public" because it’s a way to deepen my own understanding
+      while helping others along the way.
+    </p>
+  </section>
 </BaseLayout>
 <style>
-	.coming-soon {
-		font-style: italic;
-	}
+  .coming-soon {
+    font-style: italic;
+  }
 </style>

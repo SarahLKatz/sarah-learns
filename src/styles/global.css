@@ -26,3 +26,7 @@ main {
 h1 {
   color: var(--primary-teal);
 }
+
+.hide {
+  display: none;
+}
