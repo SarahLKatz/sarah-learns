@@ -1,12 +1,17 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import { format } from "date-fns/format";
 
 const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
   {/* TODO: Fix to not be UTC */}
-  <p>Published: {new Date(frontmatter.pubDate).toDateString()}</p>
+  <p>
+    Published: {
+      format(new Date(`${frontmatter.pubDate}T00:00:00.000`), "MM/dd/yyyy")
+    }
+  </p>
   {
     frontmatter.image && (
       <img

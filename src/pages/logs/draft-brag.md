@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/LearningLogPost.astro"
 title: "I Learned: Bragging Better"
-pubDate: 01-31-2025
+pubDate: "2025-02-28"
 description: "Learning about how to promote myself and comfortably share my achievements."
 author: "Sarah"
 tags: ["soft skills", "career"]
@@ -28,3 +28,7 @@ I've never been great at talking about my accomplishments at work. I prefer to b
 - You may encounter backlash when you brag or speak loudly, but that shouldn't make you afraid to speak up. More often than not, when you speak up, you will see improvements in your work life and in recognition of your accomplishments.
 - If you want to be recognized for a particular part of your work, even if it's not what you do most often, mention that work first when talking about your work/experience. Describe yourself not just as who you are but who you want to be.
 - Practice! Practice! Practice! Practice your brags, practice introductions ... basically, anything you're going to say about yourself, practice it first.
+- You don't have to brag all the time. Know your limits and enforce them.
+- Your message needs to be consistent
+- People will judge you sometimes - you can't control that
+- Take criticism seriously when it comes from people you trust, especially if you're getting the same feedback from multiple people. Ignore criticism from the peanut gallery or that you know doesn't come from a good place.
