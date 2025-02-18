@@ -30,3 +30,9 @@ h1 {
 .hide {
   display: none;
 }
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}

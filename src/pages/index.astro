@@ -1,23 +1,38 @@
 ---
-import { getCollection, type CollectionEntry } from "astro:content"
-import BaseLayout from "../layouts/BaseLayout.astro"
-import type {LearningLog} from '../types'
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+import type { LearningLog } from "../types";
 
-const allPosts = await getCollection('learningLogs', ({ data }) => {
+const allPostsRaw = await getCollection("learningLogs", ({ data }) => {
   return data.draft !== true;
 });
-const pageTitle = "Sarah's Learning Log"
-
+const allPosts = allPostsRaw.sort(
+  (a: { data: { pubDate: string } }, b: { data: { pubDate: string } }) => {
+    return (
+      new Date(a.data.pubDate).getTime() - new Date(b.data.pubDate).getTime()
+    );
+  }
+);
+const pageTitle = "Sarah's Learning Log";
 ---
-<BaseLayout pageTitle={pageTitle}> 
-    <h2>(Some of) The Things I've Learned</h2>
-    <p>Hi, I'm <a href="/about">Sarah</a>, and welcome to my learning log</p>
-    <p>
-        This is a place for me to share short posts about the things I'm learning as part of my engineering journey.  
-        The focus will be on new tech learnings, but I'll also share some interesting (to me) work life learnings.
-    </p>
-    <p>Thanks for joining me on my learning journey!</p>
-    <ul>
-        {allPosts.map((log: LearningLog) => <li><a href={`/logs/${log.id}`}>{log.data.title}</a></li>)}
-    </ul>
+
+<BaseLayout pageTitle={pageTitle}>
+  <h2>(Some of) The Things I've Learned</h2>
+  <p>Hi, I'm <a href="/about">Sarah</a>, and welcome to my learning log</p>
+  <p>
+    This is a place for me to share short posts about the things I'm learning as
+    part of my engineering journey. The focus will be on new tech learnings, but
+    I'll also share some interesting (to me) work life learnings.
+  </p>
+  <p>Thanks for joining me on my learning journey!</p>
+  <ul>
+    {
+      allPosts.map((log: LearningLog) => (
+        <li>
+          <a href={`/logs/${log.id}`}>{log.data.title}</a>
+        </li>
+      ))
+    }
+  </ul>
 </BaseLayout>

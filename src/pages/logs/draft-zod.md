@@ -1,0 +1,28 @@
+---
+layout: "../../layouts/LearningLogPost.astro"
+title: "I Learned: API Validation with Zod"
+pubDate: "2025-02-28"
+description: "Learning how to use Zod for API validation."
+author: "Sarah"
+tags: ["learning", "express", "coding"]
+draft: true
+---
+
+## The Why/What
+
+- As part of the project I'm working on (at work), I need to update a backend endpoint to receive/parse some new types of data. A teammate used zod to validate some similar data, and suggested I do the same. I haven't used Zod before, so it was time to learn!
+- Zod: [https://zod.dev/](https://zod.dev/)
+
+## The How
+
+- Reading through my teammate's code
+- Zod documentation: [https://zod.dev/?id=basic-usage](https://zod.dev/?id=basic-usage)
+
+## Lessons Learned
+
+- I can use `z.coerce` to coerce values to a primitive type if that's what I need them to be. For more control over the coercion logic, `z.preprocess` or `z.pipe()` may be more useful.
+- There are a variety of methods available to validate date and/or time (which will be useful in my case, as a few of the fields I'm validating are dates)
+- Adding `.partial()` to a schema makes all top-level properties optional (similar to Typescript's `Partial`). `.deepPartial()` does this for all levels of the schema (useful if you have a lot of nested objects where all properties should be optional). The opposite of partial is `.required()`.
+- You can create custom Zod schema (to match your Typescript objects) using `z.custom()`. This method accepts an optional validation function (with no validation function, anything will pass).
+- `.parse()` will return a deep clone of the passed-in variable if validation passes and throws an error if the validation fails. `.safeParse()` does not throw an error if validation fails - it returns either the parsed data or a `ZodError` instance, which has information about the validation.
+- While the methods listed above are the ones I see myself using most often, Zod has a lot of methods to cover a variety of use cases - I can see who some people find it super useful! I'm excited to see if I end up finding it valuable for my project.

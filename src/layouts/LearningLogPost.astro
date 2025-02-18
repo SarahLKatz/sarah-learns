@@ -6,7 +6,6 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-  {/* TODO: Fix to not be UTC */}
   <p>
     Published: {
       format(new Date(`${frontmatter.pubDate}T00:00:00.000`), "MM/dd/yyyy")
